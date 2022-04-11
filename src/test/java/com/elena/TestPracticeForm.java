@@ -21,7 +21,7 @@ public class TestPracticeForm {
     }
 
     @Test
-    void FillFormTest(){
+    void fillFormTest(){
         open("/automation-practice-form"); //open required page
 
         //workaround
@@ -46,7 +46,7 @@ public class TestPracticeForm {
         $("#firstName").setValue(firstName);
         $("#lastName").setValue(lastName);
         $("#userEmail").setValue(userEmail);
-        $(byText(gender)).click();
+        $("#genterWrapper").$(byText(gender)).click();
         $("#userNumber").setValue(userNumber);
 
         //date pain
@@ -56,7 +56,7 @@ public class TestPracticeForm {
         $(byText(day)).click();
 
         $("#subjectsInput").setValue(subject).pressEnter();
-        $(byText(hobby)).click();
+        $("#hobbiesWrapper").$(byText(hobby)).click();
         $("#uploadPicture").uploadFromClasspath("cat.jpg");
 
         //location
